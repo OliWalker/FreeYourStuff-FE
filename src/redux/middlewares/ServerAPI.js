@@ -8,7 +8,7 @@ export default store => next => action => {
     ...action,
     type: action.type + '_REQUEST'
   })
-  console.log("fethcing")
+  console.log("fetching")
   fetch('https://fys-demo.herokuapp.com/getStuff')
     .then(data => data.json())
     .then(data => {
@@ -21,5 +21,5 @@ export default store => next => action => {
         type: action.type + '_FAILURE'
       })
     })
-  
+
 }

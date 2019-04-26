@@ -50,10 +50,10 @@ const reducer = (state = initialState, action) => {
 
 
 
-      
+
 
     case 'SORT_ALL_GIFTS':
-      console.log("TRING TO SORT")
+      console.log("TRYING TO SORT")
       let data = state.gifts;
       data.forEach(gift => {
         if (gift.location) gift.distance = helpers.getDistance(gift.location.lat, gift.location.lng, state.location.lat, state.location.lng)
@@ -119,7 +119,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         gifts: [action.data, ...state.gifts]
       }
-    
+
 
     case 'NEW_GIFT_TO_DB_SUCCESS':
       return {
@@ -135,7 +135,7 @@ const reducer = (state = initialState, action) => {
     case 'UPDATE_GIFT_IN_DB_REQUEST':
     return state
 
-  
+
 
     case 'UPDATE_GIFT_IN_DB_SUCCESS':
       return {
